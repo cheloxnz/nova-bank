@@ -1,0 +1,52 @@
+:root {
+  --bg: #f4f5f8;
+  --surface: #ffffff;
+  --surface-2: #f0f1f5;
+  --ink: #0e1116;
+  --ink-2: #3b4150;
+  --ink-3: #7a8193;
+  --line: #e7e9ef;
+  --brand: #4f46e5;
+  --brand-2: #6d5efc;
+  --brand-50: #eeedfd;
+  --ok: #109b56;
+  --ok-50: #e6f6ee;
+  --danger: #e5484d;
+  --danger-50: #fdecec;
+  /* categorías (paleta validada, orden fijo) */
+  --c1: #2a78d6; --c2: #eb6834; --c3: #1baf7a; --c4: #eda100; --c5: #e87ba4; --c6: #4a3aa7;
+  --r: 18px;
+  --ease: cubic-bezier(.22, 1, .36, 1);
+  --font: 'Inter Variable', Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  color-scheme: light;
+}
+*, *::before, *::after { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html, body { margin: 0; height: 100%; }
+body { background: var(--bg); color: var(--ink); font-family: var(--font); font-size: 15px; line-height: 1.45; -webkit-font-smoothing: antialiased; font-feature-settings: 'cv11', 'ss01', 'tnum'; }
+a { color: inherit; text-decoration: none; }
+button, input { font: inherit; color: inherit; }
+button { background: none; border: 0; padding: 0; cursor: pointer; }
+svg { display: block; }
+:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; border-radius: 8px; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 54px; padding: 0 22px; border-radius: 16px; font-weight: 600; font-size: 16px; transition: transform .15s, background .2s, opacity .2s; }
+.btn:active { transform: scale(.98); }
+.btn-primary { background: var(--ink); color: #fff; }
+.btn-brand { background: var(--brand); color: #fff; }
+.btn-soft { background: var(--surface-2); }
+.btn-block { width: 100%; }
+.btn:disabled { opacity: .35; pointer-events: none; }
+
+.card { background: var(--surface); border-radius: var(--r); }
+.h-title { font-size: 26px; font-weight: 700; letter-spacing: -.035em; margin: 0; }
+.sec-title { display: flex; justify-content: space-between; align-items: baseline; margin: 26px 0 10px; }
+.sec-title h2 { font-size: 17px; font-weight: 650; letter-spacing: -.02em; margin: 0; }
+.sec-title a, .sec-title button { font-size: 14px; color: var(--brand); font-weight: 600; }
+.muted { color: var(--ink-3); }
+.ok { color: var(--ok); }
+.num { font-variant-numeric: tabular-nums; letter-spacing: -.02em; }
+
+.fade-enter-active, .fade-leave-active { transition: opacity .2s; }
+.fade-enter-from, .fade-leave-to { opacity: 0; }
+
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; } }
